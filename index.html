@@ -12,6 +12,15 @@
       padding: 0;
     }
 
+    p {
+      font-size: 4em;
+      font-family: sans-serif
+    }
+
+    .iframe-wrapper {
+      position: relative;
+    }
+
     iframe {
       transform: scale(0.2046875);
       transform-origin: top left;
@@ -19,16 +28,18 @@
       height: 1080px;
       border: none;
       position: absolute;
-      top: 3em;
+      top: 0;
       left: 0;
     }
   </style>
 </head>
 
 <body>
-  <p>The iframe below is scaled down to 0.2. The iframe contains a div with baground-image which is scaled up to 1.5.
+  <p>The iframe below is scaled down to 0.2. The iframe contains a div with baground-image. The div is scaled up to 1.5.
     Try zooming in and out on an iOS 26 device to crash the Safari tab.</p>
-  <iframe src="https://253b66f6df2f.ngrok-free.app/iframe.html"></iframe>
+  <div class="iframe-wrapper">
+    <iframe src="/ios_webkit_crash_pg/iframe.html"></iframe>
+  </div>
 </body>
 
 </html>
